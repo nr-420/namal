@@ -1,0 +1,225 @@
+/* =========================================
+   1. IMPORTS & FONTS
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* =========================================
+   2. GLOBAL VARIABLES (THEME)
+   ========================================= */
+:root {
+    /* Colors - Dark "Investigative" Theme */
+    --bg-void: #020617;       /* Deepest background */
+    --bg-card: #0f172a;       /* Slate 900 */
+    --bg-subcard: #1e293b;    /* Slate 800 */
+
+    --text-primary: #f8fafc;  /* White/Slate 50 */
+    --text-muted: #94a3b8;    /* Slate 400 */
+
+    --border-color: #334155;  /* Slate 700 */
+    --accent-red: #dc2626;    /* "Alarm" Red */
+    --accent-red-dim: rgba(220, 38, 38, 0.1);
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Alegreya Sans', sans-serif;
+}
+
+/* =========================================
+   3. RESET & BASE STYLES
+   ========================================= */
+:root {
+    font-family: var(--font-body);
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: dark; /* Enforce dark scrollbars */
+    color: var(--text-primary);
+    background-color: var(--bg-void);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    /* CRITICAL FIX: Removed display: flex/place-items: center
+       so the page can scroll vertically like a normal website. */
+    overflow-x: hidden;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff; /* You might want to change this to --accent-red later */
+    text-decoration: inherit;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-red);
+}
+
+/* =========================================
+   4. TYPOGRAPHY
+   ========================================= */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    margin: 0 0 1rem 0;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: var(--font-body); /* Subtitles often look better in Sans */
+    font-weight: 300;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    max-width: 800px;
+}
+
+/* =========================================
+   5. LAYOUT & SECTIONS
+   ========================================= */
+.section {
+    width: 100%;
+    /* Use min-height so content doesn't get cut off on mobile */
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Default center text for sections */
+}
+
+/* Add scrolling behavior for the Hero button */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   6. COMPONENT: CARDS
+   ========================================= */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-top: 2rem;
+
+    width: 100%;
+    max-width: 1100px; /* Limits width on large screens */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Deep shadow */
+    text-align: left; /* Reset text align for charts/data */
+}
+
+/* Mobile adjust for cards */
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+/* =========================================
+   7. COMPONENT: SUB-CARDS (STATS)
+   ========================================= */
+.subCard {
+    background-color: var(--bg-subcard);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* The "Danger" / Highlighted Stat Card */
+.subCard-alt {
+    background-color: rgba(220, 38, 38, 0.1); /* Red with opacity */
+    border-color: rgba(220, 38, 38, 0.3);
+}
+
+/* SubCard Typography */
+.subCard span:first-child {
+    /* Label */
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subCard span:last-child {
+    /* Value */
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--text-primary);
+}
+
+.subCard-alt span:last-child {
+    color: var(--accent-red);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 2rem 0;
+}
+
+/* =========================================
+   8. COMPONENT: BUTTONS
+   ========================================= */
+.button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.button-secondary:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================
+   9. UTILITIES
+   ========================================= */
+/* Hide scrollbar for cleaner look if needed */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-void);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}

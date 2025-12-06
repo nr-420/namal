@@ -1,0 +1,25 @@
+.sourceChip {
+    border: 1px solid hsl(45 93% 47% / 0.3);
+    font-size: 0.8em;
+    font-weight: 600;
+    border-radius: 8px;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    color: hsl(45 93% 47%);
+    background-color: hsl(45 93% 47% / 0.15);
+    transition: color 0.15s cubic-bezier(.4,0,.2,1),
+    background-color 0.15s cubic-bezier(.4,0,.2,1),
+    border-color 0.15s cubic-bezier(.4,0,.2,1),
+    text-decoration-color 0.15s cubic-bezier(.4,0,.2,1),
+    fill 0.15s cubic-bezier(.4,0,.2,1),
+    stroke 0.15s cubic-bezier(.4,0,.2,1);
+}
+
+/* Blank hover placeholder */
+.sourceChip:hover {
+    color: hsl(45 93% 47%);
+    background-color: hsl(45 93% 47% / 0.2);
+}
