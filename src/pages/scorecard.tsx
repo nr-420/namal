@@ -99,7 +99,7 @@ export default function ScorecardPage() {
                         Full timeline & sources:
                     </p>
                     <div style={{ backgroundColor: '#000', color: '#fff', padding: '8px 15px', display: 'inline-block', fontSize: '1.1rem', fontFamily: 'sans-serif', fontWeight: 'bold', letterSpacing: '1px' }}>
-                        costofadynasty.lk
+                        namal.pages.dev
                     </div>
 
                     <div style={{ marginTop: '25px', paddingTop: '20px', borderTop: '1px solid rgba(255,255,255,0.3)' }}>
