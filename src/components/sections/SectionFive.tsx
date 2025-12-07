@@ -65,7 +65,7 @@ export function SectionFive() {
                         fontSize: '0.9rem'
                     }}>
                         <strong>{t.sectionFive.alertTitle}</strong> {t.sectionFive.alertDesc}
-                        <a style={{marginLeft:4}} href={'https://m.rediff.com/news/2005/sep/25sl.htm#:~:text=The%20auditor%20general%20found%20that,clearing%20of%20the%20aid%20cargoes.'}><LuInfo/></a>
+                        <a style={{marginLeft:4}} href={'https://m.rediff.com/news/2005/sep/25sl.htm#:~:text=The%20auditor%20general%20found%20that,clearing%20of%20the%20aid%20cargoes.'} target="_blank" rel="noopener noreferrer"><LuInfo/></a>
                     </div>
 
                 </div>

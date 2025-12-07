@@ -95,7 +95,7 @@ export function SectionFour() {
                     </p>
                 </div>
                 <p style={{ fontSize: '0.8rem', color: '#64748b', marginLeft: '40px' }}>
-                    {t.sectionFour.cjContext}<a href={'https://www.dailymirror.lk/breaking_news/ex-cj-makes-public-apology/108-54377'}><span>  (Source)</span></a>
+                    {t.sectionFour.cjContext}<a href={'https://www.lankastandard.com/vault/helping-hambantota-investigation/'} target="_blank" rel="noopener noreferrer"><span>  (Source)</span></a>
                 </p>
             </div>
         </div>

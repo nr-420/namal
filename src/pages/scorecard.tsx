@@ -24,7 +24,7 @@ export default function ScorecardPage() {
                 alignItems: 'center',
                 gap: '5px',
                 fontSize: '0.9rem'
-            }}>
+            }} target="_blank" rel="noopener noreferrer">
                 <LuArrowLeft /> Back to Analysis
             </a>
 

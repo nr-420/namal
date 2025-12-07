@@ -83,7 +83,7 @@ export function SectionThree() {
                                 13%
                             </div>
                             <span style={{ fontSize: '0.8rem', color: '#f87171', marginTop: '5px', display: 'block', gap:'2' }}>
-                                <span style={{ fontSize: '0.8rem', marginTop: '5px', marginRight:'4px' }}>{t.sectionThree.actualNote}</span> <a href={'https://www.ips.lk/sri-lanka-state-of-the-economy-2005/'}><LuInfo/></a>
+                                <span style={{ fontSize: '0.8rem', marginTop: '5px', marginRight:'4px' }}>{t.sectionThree.actualNote}</span> <a href={'https://www.ips.lk/sri-lanka-state-of-the-economy-2005/'} target="_blank" rel="noopener noreferrer"><LuInfo/></a>
                             </span>
                         </div>
 
