@@ -37,8 +37,7 @@ export function SectionThree() {
                                     nameKey="name"
                                     cx="50%"
                                     cy="50%"
-                                    innerRadius={60}
-                                    outerRadius={90}
+                                    innerRadius={'50%'}
                                     stroke="none"
                                 >
                                     {data.map((_, index) => (
